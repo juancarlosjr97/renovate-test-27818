@@ -1,3 +1,13 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:base",
+        "group:all"
+    ],
+    "packageRules": [
+        {
+            "matchPackagePatterns": "*",
+            "commitMessagePrefix": "{{#if (includes depTypeList "dependencies")}}production{{else}}notProduction{{/if}}"
+        }
+    ]
 }
