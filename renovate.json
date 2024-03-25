@@ -7,7 +7,7 @@
     "packageRules": [
         {
             "matchPackagePatterns": "*",
-            "commitMessagePrefix": "{{#if (includes depTypeList 'dependencies')}}production{{else}}notProduction{{/if}}"
+            "commitMessagePrefix": "{{#if (includes depTypes 'dependencies')}}production{{else}}notProduction{{/if}}"
         }
     ],
     "fetchChangeLogs": "off"
