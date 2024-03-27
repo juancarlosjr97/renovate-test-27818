@@ -3,7 +3,11 @@
   "extends": ["config:base", "group:all"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["jest"],
+      "matchDepTypes": ["*"],
+      "addLabels": ["jest"]
+    },
+    {
+      "matchPackagePatterns": ["*"],
       "labels": ["jest"],
       "commitBody": "{{#if (includes labels 'jest')}}Jest Dependency{{else}}Other Libraries{{/if}}"
     }
