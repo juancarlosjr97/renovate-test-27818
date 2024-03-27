@@ -3,12 +3,9 @@
   "extends": ["config:base", "group:all"],
   "packageRules": [
     {
-      "matchPackagePatterns": "*",
-      "commitMessagePrefix": "{{#if (includes depTypes 'dependencies')}}production{{else}}notProduction{{/if}}"
-    },
-    {
       "matchPackagePatterns": ["jest"],
-      "labels": ["jest"]
+      "labels": ["jest"],
+      "commitMessagePrefix": "{{#if (includes labels 'jest')}}Jest Dependency{{else}}Other Libraries{{/if}}"
     }
   ],
   "fetchChangeLogs": "off"
