@@ -5,7 +5,7 @@
     {
       "matchPackagePatterns": ["jest"],
       "labels": ["jest"],
-      "commitMessagePrefix": "{{#if (includes labels 'jest')}}Jest Dependency{{else}}Other Libraries{{/if}}"
+      "commitBody": "{{#if (includes labels 'jest')}}Jest Dependency{{else}}Other Libraries{{/if}}"
     }
   ],
   "fetchChangeLogs": "off"
