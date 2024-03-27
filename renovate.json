@@ -1,14 +1,15 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-        "config:base",
-        "group:all"
-    ],
-    "packageRules": [
-        {
-            "matchPackagePatterns": "*",
-            "commitMessagePrefix": "{{#if (includes depTypes 'dependencies')}}production{{else}}notProduction{{/if}}"
-        }
-    ],
-    "fetchChangeLogs": "off"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", "group:all"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": "*",
+      "commitMessagePrefix": "{{#if (includes depTypes 'dependencies')}}production{{else}}notProduction{{/if}}"
+    },
+    {
+      "matchPackagePatterns": ["jest"],
+      "labels": ["jest"]
+    }
+  ],
+  "fetchChangeLogs": "off"
 }
